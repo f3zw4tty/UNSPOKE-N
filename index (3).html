@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unspoken</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Unspoken</h1>
+    <p>Say what you never could.</p>
+    <button onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
+      Send a message
+    </button>
+  </header>
+
+  <section id="form">
+    <h2>Send anonymously</h2>
+
+    <form id="messageForm">
+      <input type="text" id="name" placeholder="Name of receiver (optional)">
+      <input type="text" id="area" placeholder="Area">
+      <textarea id="message" placeholder="Your message"></textarea>
+
+      <input type="color" id="color" value="#00ffd5">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search name or area">
+    <button onclick="filterMessages()">Filter</button>
+
+    <div id="messages">
+      <div class="msg">To Katie, "I miss you more than I should" - Manchester</div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+  <script src="firebase.js"></script>
+
+</body>
+</html>
